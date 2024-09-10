@@ -74,3 +74,14 @@ function recursiveFibonacci(n) {
 console.log(recursiveFibonacci(0))
 console.log(recursiveFibonacci(1))
 console.log(recursiveFibonacci(6))
+
+//Recursive Factorial
+function recursiveFactorial(n) {
+    if (n === 0) {
+        return 1
+    }
+    return n * recursiveFactorial(n-1)
+}
+console.log(recursiveFactorial(0))
+console.log(recursiveFactorial(1))
+console.log(recursiveFactorial(5))
