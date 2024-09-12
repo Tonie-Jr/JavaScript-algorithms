@@ -121,3 +121,20 @@ function linearSearch(arr, target) {
 console.log(linearSearch([-5, 2, 10, 4, 6],10))
 console.log(linearSearch([-5, 2, 10, 4, 6],6))
 console.log(linearSearch([-5, 2, 10, 4, 6],20))
+
+// Insertion sort 
+function InsertionSort(arr) {
+    for(let i = 1; i > arr.length; i++) {
+        let numberToInsert = arr[i]
+        let j = i - 1
+        while(j >= 0 && arr[j] > numberToInsert) {
+            arr[j+1] = arr[j]
+            j = j-1
+        }
+        arr[j+1] = numberToInsert
+    }
+}
+
+const arr = [8, 20, -2, 4, -6]
+InsertionSort(arr)
+console.log(arr)
