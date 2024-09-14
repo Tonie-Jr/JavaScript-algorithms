@@ -172,6 +172,19 @@ function cartesianProduct(arr1, arr2) {
 const arr1 = [1, 2]
 const arr2 = [3, 4, 5]
 console.log(cartesianProduct(arr1, arr2))
+
+//The Tower of Hanoi function
+function towerOfHanoi(n, fromRod, toRod, usingRod) {
+    if(n === 1) {
+        console.log(`Move the disk 1 from ${fromRod} to ${toRod}`)
+        return
+    }
+    towerOfHanoi(n-1, fromRod, usingRod,toRod)
+    console.log(`Move disk ${n} from ${fromRod} to ${toRod}`)
+    towerOfHanoi(n-1, usingRod, toRod, fromRod)
+}
+towerOfHanoi(3, 'A', 'C','B')
+
 //Climbing staircase function
 function climbingStaircase(n) {
     const no0fWays = [1, 2]
