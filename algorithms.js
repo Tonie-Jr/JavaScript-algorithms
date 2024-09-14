@@ -172,4 +172,16 @@ function cartesianProduct(arr1, arr2) {
 const arr1 = [1, 2]
 const arr2 = [3, 4, 5]
 console.log(cartesianProduct(arr1, arr2))
-
+//Climbing staircase function
+function climbingStaircase(n) {
+    const no0fWays = [1, 2]
+    for (let i = 2; i <= n; i++) {
+        no0fWays[i] = no0fWays[i-1] + no0fWays[i-2]
+    }
+    return no0fWays[n - 1]
+}
+console.log(climbingStaircase(1))
+console.log(climbingStaircase(2))
+console.log(climbingStaircase(3))
+console.log(climbingStaircase(4))
+console.log(climbingStaircase(5))
