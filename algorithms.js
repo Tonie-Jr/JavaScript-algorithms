@@ -199,6 +199,8 @@ console.log(climbingStaircase(3))
 console.log(climbingStaircase(4))
 console.log(climbingStaircase(5))
 
+
+//CODE CAMP JAVASCRIPT ALGORITHIMS WINT JUSTIN KIM
 //Sum array function
 function sumAll(arr) {
     let min, max;
@@ -217,3 +219,17 @@ function sumAll(arr) {
     return sum;
 }
 console.logO(sumAll([1, 4]))
+//Diff two arrays. It compares two arrays and returns a new array with any item found in one of the two give arrays, but not both. 
+
+
+
+//create timers
+function createTimers () {
+    for (var i = 0; i < 3; i++) {
+        setTimeout(() => {
+            console.log(i);
+        }, 100);
+    }
+}
+
+createTimers();
