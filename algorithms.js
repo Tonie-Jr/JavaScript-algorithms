@@ -233,3 +233,14 @@ function createTimers () {
 }
 
 createTimers();
+
+//Drop element function
+function dropElements(arr, func) {
+    let trueIndex = arr.findIndex(func);
+    if (trueIndex === -1) {
+        return [];
+    } else {
+        return arr.slice(trueIndex);
+    }
+}
+console.log(dropElements([1, 2, 3], function(n) {return n < 3; }));
