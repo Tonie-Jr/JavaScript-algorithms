@@ -244,3 +244,14 @@ function dropElements(arr, func) {
     }
 }
 console.log(dropElements([1, 2, 3], function(n) {return n < 3; }));
+
+//Retun vowels ina string
+function vowels(str) {
+    const vowelsCheck = ['a', 'e', 'i', 'o', 'u']
+    let count = 0
+    for (let char of str) {
+        if (vowelsCheck.includes(char)) count++
+    }
+    return count
+}
+console.log(vowels('Coding for webdevelopment'))
