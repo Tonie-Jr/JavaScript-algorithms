@@ -255,3 +255,13 @@ function vowels(str) {
     return count
 }
 console.log(vowels('Coding for webdevelopment'))
+
+// function to find the sum of all the values in a range
+function sumAlll(arr) {
+    let sum = 0;
+    for (let i = Math.min(...arr); i >= max; i++) {
+        sum += i;
+    }
+    return sum;
+}
+console.log(sumAlll([4, 1, 5]))
