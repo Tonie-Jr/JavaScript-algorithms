@@ -265,3 +265,20 @@ function sumAlll(arr) {
     return sum;
 }
 console.log(sumAlll([4, 1, 5]))
+
+
+ // Algorithm that returns the items found in only in one of different arrays
+ function diffArray(arr1, arr2) {
+    const union = new Set([...arr1, ...arr2]);
+    console.log(union);
+    const symmDiff = [];
+    for  (const currentEl of union) {
+        if (arr1.includes(currentEl) && !arr2.includes(currentEl)) {
+            symmDiff.push(currentEl);
+        } else if (arr2. includes(currentEl) && !arr1.includes(currentEl)) {
+            symmDiff.push(currentEl);
+        }
+    }
+    return symmDiff;
+ }
+console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]))
