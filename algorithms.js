@@ -220,19 +220,21 @@ function sumAll(arr) {
 }
 console.logO(sumAll([1, 4]))
 //Diff two arrays. It compares two arrays and returns a new array with any item found in one of the two give arrays, but not both. 
-
-
-
-//create timers
-function createTimers () {
-    for (var i = 0; i < 3; i++) {
-        setTimeout(() => {
-            console.log(i);
-        }, 100);
+// Algorithm that returns the items found in only in one of different arrays
+function diffArray(arr1, arr2) {
+    const union = new Set([...arr1, ...arr2]);
+    console.log(union);
+    const symmDiff = [];
+    for  (const currentEl of union) {
+        if (arr1.includes(currentEl) && !arr2.includes(currentEl)) {
+            symmDiff.push(currentEl);
+        } else if (arr2. includes(currentEl) && !arr1.includes(currentEl)) {
+            symmDiff.push(currentEl);
+        }
     }
-}
-
-createTimers();
+    return symmDiff;
+ }
+console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]))
 
 //Drop element function
 function dropElements(arr, func) {
@@ -266,19 +268,18 @@ function sumAlll(arr) {
 }
 console.log(sumAlll([4, 1, 5]))
 
-
- // Algorithm that returns the items found in only in one of different arrays
- function diffArray(arr1, arr2) {
-    const union = new Set([...arr1, ...arr2]);
-    console.log(union);
-    const symmDiff = [];
-    for  (const currentEl of union) {
-        if (arr1.includes(currentEl) && !arr2.includes(currentEl)) {
-            symmDiff.push(currentEl);
-        } else if (arr2. includes(currentEl) && !arr1.includes(currentEl)) {
-            symmDiff.push(currentEl);
+function sumFibs(num) {
+    let a = 1;
+    let b = 1;
+    let sum = a;
+    while (b <= num) {
+        if (b % 2 !== 0) {
+            sum +=b;
         }
+        let temp = b;
+        b = a + b;
+        a = temp;
     }
-    return symmDiff;
- }
-console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]))
+    return sum;
+}
+console.log(sumFibs(34))
