@@ -267,7 +267,7 @@ function sumAlll(arr) {
     return sum;
 }
 console.log(sumAlll([4, 1, 5]))
-
+//sum of all fibonacci numbers
 function sumFibs(num) {
     let a = 1;
     let b = 1;
@@ -283,3 +283,23 @@ function sumFibs(num) {
     return sum;
 }
 console.log(sumFibs(34))
+//
+const A_CODE = 'A'.charCodeAt(0);
+
+function rot13(str) {
+    let output = '';
+    for (const c of str) {
+        if (!/[A-Z]/.test(c)) {
+            output += c;
+        }else {
+            let code = c.charCodeAt(0);
+            code -= 13;
+            id (code < A_CODE) {
+                code += 26;
+            }
+            output += String.fromCharCode(code)
+        }
+    }
+    return output;
+}
+console.log(rot13("SERR PBQR PNZC"));
